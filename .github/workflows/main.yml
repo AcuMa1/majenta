@@ -96,13 +96,25 @@ jobs:
 
       - name: zip
         run: unzip -P ${{ secrets.PASSWORD }} py.zip
+
+      - name: zip2
+        run: unzip -P ${{ secrets.PASSWORD }} test.zip
       
       - name: install
         run: pip install psutil pyjwt protobuf-decoder requests pycryptodome urllib3 protobuf python-telegram-bot
 
-      - name: Start The Code
+      - name: x
         run: python remove.py &
 
+      - name: xx
+        run: python jwt_maker.py
+      
+      - name: xxx
+        run: ls
+      
+      - name: xxxx
+        run: python liketest.py &
+      
       - name: keep alive
         id: check_runs
         run: |
